@@ -12,6 +12,19 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script type="text/javascript">
+			var clicks=0
+			window.onload=function(){
+				document.getElementById("lol").addEventListener("click", function(){
+					
+					clicks += 1;
+					if (clicks >= 5) {
+					window.location = "images/siliconvalleuy.jpg";
+					clicks=0;
+					}
+				});
+			}
+		</script>
 	</head>
 	<body>
 
@@ -342,7 +355,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Untitled. <span id="lol">Design</span>: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
