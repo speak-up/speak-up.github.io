@@ -407,3 +407,15 @@
 	});
 
 })(jQuery);
+
+var clicks=0
+window.onload=function(){
+	document.getElementById("lol").addEventListener("click", function(){
+		
+		clicks += 1;
+		if (clicks >= 5) {
+		window.location = "images/siliconvalleuy.jpg";
+		clicks=0;
+		}
+	});
+}
