@@ -408,14 +408,42 @@
 
 })(jQuery);
 
-var clicks=0
+
+
+var svclicks=0
+var rvclicks=0
+var samclicks=0
+var samlinks = ["https://www.youtube.com/watch?v=WyiIGEHQP8o",
+				"https://www.youtube.com/watch?v=Amq-qlqbjYA",
+				"https://s-media-cache-ak0.pinimg.com/originals/c8/56/d8/c856d8554f20550beabb3f3377313b10.jpg"];
+
 window.onload=function(){
 	document.getElementById("lol").addEventListener("click", function(){
-		
-		clicks += 1;
-		if (clicks >= 5) {
-		window.location = "images/siliconvalleuy.jpg";
-		clicks=0;
+		//console.log("sv clicked" + svclicks);
+		svclicks += 1;
+		if (svclicks >= 5) {
+			window.location = "images/siliconvalleuy.jpg";
+
+			svclicks=0;
+		}
+	});
+
+	document.getElementById("rv").addEventListener("click", function(){
+		//console.log("rv clicked" + rvclicks);
+		rvclicks += 1;
+		if (rvclicks >= 5) {
+			window.location = "https://www.youtube.com/watch?v=WyiIGEHQP8o";
+			rvclicks=0;
+		}
+	});
+
+	document.getElementById("sam").addEventListener("click", function(){
+		//console.log("sam clicked" + samclicks);
+		samclicks += 1;
+		if (samclicks >= 5) {
+			video = Math.floor(Math.random() * samlinks.length);
+			window.location = samlinks[video];
+			samclicks=0;
 		}
 	});
 }
